@@ -568,9 +568,26 @@
                     background-color: #008CBA;
                     color: white;
                 }
+                .video1{
+                    position: relative;
+                    padding-bottom: 56.25%;  
+                    height: 0;
+                    overflow: hidden;
+                    display: block;
+                }
+                .video1 iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-width: 0;
+                    outline-width: 0;
+                }
             </style>
             <p><strong>Задание №10</strong></p>
             <h3>Разработка приложений на Android Studio. Создание погодного приложения.</h3>
+            <div class="video1">
             <iframe
                 width="854" height="480" 
                 src="https://www.youtube.com/embed/zzV2aML_zNg" 
@@ -578,7 +595,7 @@
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
-            </iframe>
+            </iframe></div>
             <button class="button1">Button</button>
         </section><br>
 
