@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="standart_styles.css">
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="mobile_styles.css" media="(max-width: 480px)">
         <title>Learn HTML</title>
         <style>
-            @media (min-width:768px) and (max-width:2000px) {
-                body{
-                    background-color: #fff8dc;
-                    color: #8B4513;
-                    line-height: 1.4;
-                }
-            }
-            @media only screen and(max-width: 757px){
-                body{
+            @media only screen and (max-width: 757px){
+                section{
                     background-color: #77dde7;
                     color: #7f0083;
-                    line-height: 1.4;
+                }
+            }
+            @media (min-width:768px) and (max-width:2000px) {
+                section{
+                    background-color: #fff8dc;
+                    color: #8B4513;
                 }
             }
             body{
@@ -33,7 +32,7 @@
                     width: 100%;
                 }
             }
-        </style>
+            </style>
     </head>
     <body>
         <section class="section_1" id="sec1">
