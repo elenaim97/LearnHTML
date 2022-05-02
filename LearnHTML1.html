@@ -4,33 +4,34 @@
         <meta charset="utf-8">
         <title>Learn HTML</title>
     </head>
-    <body>
+    <body class="container">
         <style>
-            @media (max-width: 767px){
-                body{
-                    background-color: #77dde7;
-                    color: #7f0083;
-                }
+        @media (max-width: 757px){
+            section{
+                background-color: #77dde7;
+                color: #7f0083;
             }
-            @media (min-width:768px) and (max-width:1365px) {
-                body{
-                    background-color: #fff8dc;
-                    color: #8B4513;
-                }
+        }
+        @media (min-width:768px) and (max-width:1365px) {
+            section{
+                background-color: #fff8dc;
+                color: #8B4513;
             }
-            body{
-                animation-duration: 3s; animation-name: slidein
-            }
-            @keyframes slidein{
-                from{
+        }
+        body{
+            margin: 0;
+            animation-duration: 3s; animation-name: slidein
+        }            
+        @keyframes slidein{
+            from{
                 margin-left: 100%;
                 width: 300%;
-                }
-                to{
-                    margin-left: 0%;
-                    width: 100%;
-                }
             }
+            to{
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
         </style>
         <section class="section_1" id="sec1">
             <style>
@@ -123,8 +124,7 @@
                 p.s{
                     background-color: #ADD8E6;
                     border: 4px dashed #FFFF00;
-                    text-align: center;
-                    
+                    text-align: center; 
                 }
             </style>
             <p><strong>Задание №3</strong></p>
@@ -177,6 +177,7 @@
                     text-align: center;
                     margin: auto;
                     width: 26em;
+                    
                 }
             </style>
             <p>Факультеты Иркутского государственного университета путей сообщения:</p>
