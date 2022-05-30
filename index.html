@@ -98,7 +98,7 @@
             <h5>Заголовок №5</h5>
             <h6>Заголовок №6</h6>
         </div><br>
-        <a onclick="console.log('Смена фона секции')"><button id="newButton"><span>Нажми меня</span></button></a>
+        <a onclick="console.log('Смена фона секции')"><button id="newButton"><span>Нажми на меня</span></button></a>
         <script type="text/javascript">
             window.onload = function () {
                 var button = document.getElementById('newButton');
@@ -356,7 +356,6 @@
                     <img src="img/210.png" style="width:100%">
                 </div>
 
-                <!-- Next/previous controls -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
@@ -392,7 +391,7 @@
                 position: relative;
                 background-color: #fefefe;
                 margin: auto;
-               
+
                 width: 90%;
                 max-width: 1200px;
                 background-size: 100%;
@@ -515,7 +514,8 @@
                 slides[slideIndex - 1].style.display = "block";
                 dots[slideIndex - 1].className += " active";
                 captionText.innerHTML = dots[slideIndex - 1].alt;
-            }</script>
+            }
+        </script>
     </section><br>
 
     <section class="section_8" id="sec8">
@@ -882,7 +882,7 @@
 
     <section class="section_10" id="sec10">
         <style>
-            .button1 {
+            #button1 {
                 background-color: white;
                 color: black;
                 border: 2px solid #008CBA;
@@ -898,7 +898,7 @@
                 border-radius: 10px;
             }
 
-            .button1:hover {
+            #button1:hover {
                 background-color: #008CBA;
                 color: white;
             }
@@ -925,6 +925,55 @@
                 max-width: 500px;
                 margin: auto;
             }
+
+            /* Фон за формой */
+            .modal1 {
+                display: none;
+                /* Модальное окно скрыто по умолчанию */
+                position: fixed;
+                /* Фикс. Позиция на главной странице */
+                z-index: 1;
+                /* Отображение на заднем плане */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* 100% по ширине */
+                height: 100%;
+                /* 100% по высоте */
+                overflow: auto;
+                /* Включить прокрутку, если необходимо */
+                background-color: rgb(0, 0, 0);
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            /* Содержание модального окна*/
+            .modal-content1 {
+                background-color: #fefefe;
+                margin: 15% auto;
+                /* 15% от верха и центрировано */
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                /* Может быть больше и меньше, зависит от размеров экрана */
+                box-shadow: 5px 10px 5px #666;
+                /*Добавить тень */
+            }
+
+            /* Основные свойства кнопки «Закрыть» */
+            .close1 {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            /* Свойства кнопки «Закрыть», когда вы наводите на нее курсор или взаимодействуете с ней */
+            .close1:hover,
+            .close1:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
         </style>
         <p><strong>Задание №10</strong></p>
         <h3>Разработка приложений на Android Studio. Создание погодного приложения.</h3>
@@ -937,7 +986,36 @@
                 </iframe>
             </div>
         </div>
-        <button class="button1">Button</button>
+        <button id="button1">Button</button>
+        
+        <div id="myModal1" class="modal1">
+
+            <div class="modal-content1">
+                <span class="close1">&times;</span>
+                <iframe width="854" height="480" src="https://www.youtube.com/embed/zzV2aML_zNg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <script>
+            var modal = document.getElementById('myModal1');
+            var btn = document.getElementById('button1');
+            var span = document.getElementsByClassName("close1")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        
     </section><br>
 
     <section class="section_11" id="sec11">
@@ -978,6 +1056,20 @@
                 <iframe src="https://yandex.ru/map-widget/v1/-/CCUBVNDo~A" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
             </div>-->
         </div>
+    </section><br>
+    <section>
+        <p><strong>Qr-code</strong></p>
+      
+        <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+        
+        
+        <div id="qrcode"></div>
+        <script type="text/javascript">
+        new QRCode(document.getElementById("qrcode"), "Имыхелова Елена Ивановна");
+        </script>
+        
+        </script>
+        
     </section>
 </body>
 
